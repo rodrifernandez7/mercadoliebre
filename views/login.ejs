@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<%- include ('./partials/head') %> 
+
+<body>
+    
+    <%- include ('./partials/header') %> 
+
+<!-- ACA ARRANCA EL FORMULARIO -->
+<form action="/login" method="POST" class="formulario-login">
+    <div>
+        <label for="nombreUsuario"></label>
+        <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+    </div>
+    <div>
+        <label for="password"></label>
+        <input type="password" name="password" placeholder="Contraseña">
+        <span class="feedback"></span>
+    </div>
+    <div class="boton-enviar">
+        <!-- <a href="#"> --><button type="submit" class="button-form-enviar">Enviar</button><!-- </a> -->
+    </div>
+</form>
+<!-- ACA TERMINA EL FORMULARIO -->
+
+<%- include ('./partials/footer') %>

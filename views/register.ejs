@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('./partials/head') %> 
+
+<body>
+    
+    <%- include ('./partials/header') %> 
+
+<!-- ACA ARRANCA EL FORMULARIO -->
+<form action="/register" method="POST" class="formulario">
+<div class="nombre-apellido">
+    <label for="nombre"></label>
+    <input type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Nombre y apellido">
+</div>
+<div class="nombre-usuario">
+    <label for="nombreUsuario"></label>
+    <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+</div>
+<div class="email">
+    <label for="email"></label>
+    <input type="text" name="email" id="email" placeholder="Email">
+</div>
+<div class="fecha-nacimiento">
+    <label for="fechaNacimiento" class="subtitulo-nacimiento"></label>Fecha de nacimiento</label>
+    <div><input type="date" name="fecha"></div>
+</div>
+<div class="domicilio">
+    <label for="domicilio"></label>
+    <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+</div>
+<div class="contraseña">
+    <label for="password"></label>
+    <input type="password" name="password" placeholder="Contraseña">
+</div>
+<div class="confir-password">
+    <label for="password"></label>
+    <input type="password" name="password" placeholder="Confirmar contraseña">
+</div>
+<div class="perfil-usuario">
+    <label for="perfilUsuario" class="subtitulos">Perfil del usuario:</label>
+    <div>
+       
+    <input type="radio" name="perfilUsuario" id="perfilUsuario">
+    <label for="comprador">Comprador</label>
+    
+    <input type="radio" name="perfilUsuario" id="perfilUsuario">
+    <label for="Vendedor">Vendedor</label> 
+    </div>
+</div>
+<div class="foto-perfil">
+    <label for="fotoPerfil" class="subtitulos">Foto de usuario</label>
+    <input type="file" name="avatar" accept=".jpg">
+</div>
+<div class="intereses">
+    <label for="categoriaInteres" class="subtitulo-interes">Selecciona interés: </label>
+    
+    <div class="categorias">
+        <input type="checkbox" name="electro" value="electro">
+        <label for="electro" class="subtitulos">Electro</label>
+    </div>
+        
+    <div class="categorias">
+
+        <input type="checkbox" name="moda" value="moda">
+        <label for="electro" class="subtitulos">Moda</label>
+    </div>
+
+    <div class="categorias">
+
+        <input type="checkbox" name="hogar" value="hogar">
+        <label for="hogar" class="subtitulos">Hogar</label>
+    </div>
+    <div class="categorias">
+        <input type="checkbox" name="jugueteria" value="jugueteria">
+        <label for="jugueteria" class="subtitulos">Jugueteria</label>
+    </div>
+    <div class="categorias">
+
+        <input type="checkbox" name="vida-sana" value="vida-sana">
+        <label for="vida-sana" class="subtitulos">Vida Sana</label>
+    </div>
+</div>  
+<div class="button-enviar-borrar">
+    <div class="button-borrar">
+        <button type="reset" class="button-form-register">Borrar</button>
+    </div>
+    <div class="button-enviar">
+        <button type="submit" class="button-form-register"><!-- <a href="/"> -->Enviar<!-- </a> --></button>
+    </div>
+</div> 
+</form>
+<!-- TERMINA FORMULARIO -->
+
+<%- include ('./partials/footer') %>
