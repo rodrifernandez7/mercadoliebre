@@ -1,4 +1,5 @@
 const path = require('path');
+const { validationResult } = require('express-validator')
 
 const usersController = {
     login: function(req , res){
@@ -15,10 +16,23 @@ const usersController = {
         res.send('aca iría la vista del perfil del usuario');
     },
     processRegister: function (req , res){
-        return res.send({
+
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){ /* porque es un array, entonces estamos diciendo que si es > 0 , hay errores */
+            return res.render('register', {
+                errors: resultValidation.mapped(),  /* convierte el array en objeto literal */
+                oldData: req.body
+            }); 
+        }
+
+        return res.send('Ok, las validaciones se pasaron y no tienes errores')
+
+        /* return res.send(resultValidation); */
+        /* return res.send({
             body: req.body,
             file: req.file
-        });
+        }); */
     }
 };
 

@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.form-control is-invalid{
+    border-color: red;
+}
+
 .button-form-enviar{
     background-color: green;
     border-radius: 8px;
@@ -472,7 +476,7 @@ input[type=password]{
 input{
     padding: 15px 15px;
     border-radius: 8px;
-    border:none;
+    /* border:none; */
 }
 
 .button-form-register{
