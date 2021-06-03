@@ -4,7 +4,7 @@ const path = require('path');
 const productsController = require('../controllers/productsController.js');
 
 router.get('/', productsController.index);
-router.get('/vender', productsController.sell);
+router.get('/vender', productsController.create);
 
 router.post('/', productsController.store);
 

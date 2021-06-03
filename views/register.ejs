@@ -8,26 +8,26 @@
     <%- include ('./partials/header') %> 
 
 <!-- ACA ARRANCA EL FORMULARIO -->
-<form action="/register" method="POST" class="formulario">
+<form action="/users/register" method="POST" enctype="multipart/form-data" class="formulario">
 <div class="nombre-apellido">
     <label for="nombre"></label>
-    <input type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Nombre y apellido">
+    <input type="text" name="name" id="name" placeholder="Nombre y apellido">
 </div>
 <div class="nombre-usuario">
     <label for="nombreUsuario"></label>
-    <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+    <input type="text" name="user-name" id="user-name" placeholder="Nombre de usuario">
 </div>
 <div class="email">
     <label for="email"></label>
-    <input type="text" name="email" id="email" placeholder="Email">
+    <input type="email" name="email" id="email" placeholder="Email">
 </div>
 <div class="fecha-nacimiento">
     <label for="fechaNacimiento" class="subtitulo-nacimiento"></label>Fecha de nacimiento</label>
-    <div><input type="date" name="fecha"></div>
+    <div><input type="date" name="date-of-birth" id="date-of-birth"></div>
 </div>
 <div class="domicilio">
     <label for="domicilio"></label>
-    <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+    <input type="text" name="adress" id="adress" placeholder="Domicilio">
 </div>
 <div class="contraseña">
     <label for="password"></label>
@@ -35,22 +35,22 @@
 </div>
 <div class="confir-password">
     <label for="password"></label>
-    <input type="password" name="password" placeholder="Confirmar contraseña">
+    <input type="password" name="confirm-password" placeholder="Confirmar contraseña">
 </div>
 <div class="perfil-usuario">
     <label for="perfilUsuario" class="subtitulos">Perfil del usuario:</label>
     <div>
        
-    <input type="radio" name="perfilUsuario" id="perfilUsuario">
+    <input type="radio" name="user-buyer" id="user-buyer">
     <label for="comprador">Comprador</label>
     
-    <input type="radio" name="perfilUsuario" id="perfilUsuario">
+    <input type="radio" name="user-seller" id="user-seller">
     <label for="Vendedor">Vendedor</label> 
     </div>
 </div>
 <div class="foto-perfil">
     <label for="fotoPerfil" class="subtitulos">Foto de usuario</label>
-    <input type="file" name="avatar" accept=".jpg">
+    <input type="file" name="avatar">
 </div>
 <div class="intereses">
     <label for="categoriaInteres" class="subtitulo-interes">Selecciona interés: </label>
