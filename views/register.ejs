@@ -16,7 +16,7 @@
             <label for="nombre"></label>
             <input type="text" name="name" id="name" placeholder="Nombre y apellido" value="<%= locals.oldData ? oldData.name : null %>" >
             <% if (locals.errors && errors.name) { %>
-                <%= errors.name.msg %>
+                <p><%= errors.name.msg %></p>
             <% } %>
         </div>
         <div class="nombre-usuario">
