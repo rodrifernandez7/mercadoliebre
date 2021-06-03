@@ -13,10 +13,12 @@ app.use(express.json());
 /* Rutas */
 const homeRoutes = require ('./routes/home.js');
 const usersRoutes = require ('./routes/users.js');
+const productsRoutes = require ('./routes/products');
 
 
 app.use('/', homeRoutes);
 app.use('/users', usersRoutes);
+app.use('/products', productsRoutes);
 
 
 /* Servidor */
