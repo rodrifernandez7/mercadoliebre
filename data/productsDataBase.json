@@ -1,16 +1,16 @@
 [
     {
         "id": 1,
-        "name": "cama",
-        "price": 2000,
-        "category": "last-visit",
-        "description": "cama de rodri para la venta"
-    },
-    {
-        "id": 2,
         "name": "auto",
         "price": 1000000,
         "category": "last-visit",
         "description": "auto nuevo"
+    },
+    {
+        "id": 2,
+        "name": "cama",
+        "price": 5000,
+        "category": "last-visit",
+        "description": "cama para la venta"
     }
 ]

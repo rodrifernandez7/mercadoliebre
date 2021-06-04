@@ -1,6 +1,8 @@
 const path = require('path');
 const { validationResult } = require('express-validator')
 
+const User = require('../models/User.js');
+
 const usersController = {
     login: function(req , res){
         /* let htmlPath = path.join(__dirname,'../views/login.html' );
@@ -25,8 +27,10 @@ const usersController = {
                 oldData: req.body
             }); 
         }
+        User.create(req.body);
+        return res.send('Se guardó el producto.');
 
-        return res.send('Ok, las validaciones se pasaron y no tienes errores')
+        /* return res.send('Ok, las validaciones se pasaron y no tienes errores') */
 
         /* return res.send(resultValidation); */
         /* return res.send({
