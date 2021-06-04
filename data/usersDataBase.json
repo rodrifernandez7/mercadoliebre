@@ -1,1 +1,15 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "Rodrigo Fernández",
+        "userName": "rodri123",
+        "email": "rodrifm2009@hotmail.com",
+        "dateOfBirth": "2000-10-12",
+        "adress": "Acevedo",
+        "password": "$2a$10$R0JiCqCFzvKUI9l3hjv...FXxuJtRqNdKRdDbmGTy86BCDLE8icz2",
+        "confirmPassword": "$2a$10$wvsiBlCWy3TCkuFc1nbE1.aIQQyEiOKX/LsaxixXGTZgpQefNBWDi",
+        "user-buyer": "on",
+        "moda": "moda",
+        "avatar": "557733c519aa5d7e0276a09d5884e785.jpg"
+    }
+]

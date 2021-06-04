@@ -1,1 +1,10 @@
-[  ]
+[
+    {
+        "id": 1,
+        "name": "cama",
+        "price": "100",
+        "category": "visited",
+        "description": "cama a la venta nueva",
+        "productImage": "5c01ef3d-a4bb-437c-beec-96323c9fc1ce.JPG"
+    }
+]

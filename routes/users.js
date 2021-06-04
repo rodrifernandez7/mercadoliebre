@@ -12,6 +12,9 @@ const validations = require('../middlewares/validateRegisterMiddleware');
 /* Formulario de login */
 router.get('/login', usersController.login);
 
+/* Procesar el login */
+router.post('/login', usersController.loginProcess);
+
 /* Formulario de registro */
 router.get('/register', usersController.register);
 

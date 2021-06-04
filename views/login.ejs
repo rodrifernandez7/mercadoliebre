@@ -7,10 +7,13 @@
     <%- include ('./partials/header') %> 
 
 <!-- ACA ARRANCA EL FORMULARIO -->
-<form action="/login" method="POST" class="formulario-login">
+<form action="/users/login" method="POST" class="formulario-login">
     <div>
         <label for="nombreUsuario"></label>
-        <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+        <input type="text" name="userName" id="userName" placeholder="Nombre de usuario">
+        <% if (locals.errors && errors.userName) { %>
+            <p><%= errors.userName.msg %> </p>
+        <% } %>
     </div>
     <div>
         <label for="password"></label>
@@ -18,7 +21,7 @@
         <span class="feedback"></span>
     </div>
     <div class="boton-enviar">
-        <!-- <a href="#"> --><button type="submit" class="button-form-enviar">Enviar</button><!-- </a> -->
+        <button type="submit" class="button-form-enviar">Enviar</button>
     </div>
 </form>
 <!-- ACA TERMINA EL FORMULARIO -->

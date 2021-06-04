@@ -19,8 +19,14 @@ const productsController = {
 
     store: function(req , res){
 
-        Product.create(req.body);
-        return res.send('Se guardó el usuario.');
+        let productToCreate = {
+            ...req.body,
+            productImage: req.file.originalname
+        }
+
+        let productCreated = Product.create(productToCreate);
+        
+        return res.send('Se creo el producto correctamente.');
         
     }
 }
