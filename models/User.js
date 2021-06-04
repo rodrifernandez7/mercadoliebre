@@ -40,7 +40,8 @@ const User = {
         let allUsers = this.findAll();
         let newUser = {
             id:this.generateId(),
-            ...usertData
+            /* image:req.file.filename, */
+            ...userData
         }
         allUsers.push(newUser);
         fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, 4));

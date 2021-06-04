@@ -4,19 +4,19 @@ const { validationResult } = require('express-validator')
 const User = require('../models/User.js');
 
 const usersController = {
+
     login: function(req , res){
-        /* let htmlPath = path.join(__dirname,'../views/login.html' );
-        res.sendFile(htmlPath); */
         res.render('login');
     },
+
     register: function (req , res){
-        /* let htmlPath = path.join(__dirname,'../views/register.html' );
-        res.sendFile(htmlPath); */
         res.render('register');
     },
+
     profile: function (req , res){
         res.send('aca iría la vista del perfil del usuario');
     },
+
     processRegister: function (req , res){
 
         const resultValidation = validationResult(req);
@@ -27,16 +27,9 @@ const usersController = {
                 oldData: req.body
             }); 
         }
+        
         User.create(req.body);
         return res.send('Se guardó el producto.');
-
-        /* return res.send('Ok, las validaciones se pasaron y no tienes errores') */
-
-        /* return res.send(resultValidation); */
-        /* return res.send({
-            body: req.body,
-            file: req.file
-        }); */
     }
 };
 

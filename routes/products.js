@@ -6,7 +6,7 @@ const path = require('path');
 const productsController = require('../controllers/productsController.js');
 
 /* Middlewares */
-/* const uploadFileProduct = require ('../middlewares/multerProductMiddleware.js'); */
+const uploadFileProduct = require('../middlewares/multerProductMiddleware');
 
 /* Vista de index */
 router.get('/', productsController.index);
@@ -15,6 +15,6 @@ router.get('/', productsController.index);
 router.get('/vender', productsController.create);
 
 /* Procesamiento de creación de producto */
-router.post('/', productsController.store);
+router.post('/', uploadFileProduct.single('product-image'), productsController.store);
 
 module.exports = router;

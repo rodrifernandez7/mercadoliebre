@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-/* const User = require('../models/User.js'); */
+const Product = require('../models/Products.js');
 
 const productsController = {
 
@@ -18,17 +18,10 @@ const productsController = {
     },
 
     store: function(req , res){
-        /* let allProducts = this.findAll();
-        let newProduct = {
-            id: this.generateId(),
-            ...req.body
-        }
-        allProducts.push(newProduct);
-        fs.writeFileSync(this.filename, JSON.stringify(allProducts, null, 4));
-        return true; */
 
-        /* User.create(req.body);
-        return res.send('Se guardó el producto.'); */
+        Product.create(req.body);
+        return res.send('Se guardó el usuario.');
+        
     }
 }
 
