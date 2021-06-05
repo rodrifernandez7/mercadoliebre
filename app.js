@@ -1,13 +1,28 @@
 const express = require ('express');
+const session = require ('express-session');
 const process = require ('process');
 const app = express();
 const path = require ('path');
+const cookies = require('cookie-parser');
+
+/* Porque es un middleware de aplicacion completa */
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+
 
 /* Configuraciones */
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+app.use(session({
+    secret: 'Silencio. Es un secreto...',
+    resave: false,
+    saveUnitialized: false
+}));
+
+app.use(cookies()); /* implemento cookies */
+
+app.use(userLoggedMiddleware); /* tiene que ir siempre despues de la session */
 
 
 /* Rutas */
