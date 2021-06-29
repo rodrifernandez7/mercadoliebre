@@ -4,6 +4,7 @@ const process = require ('process');
 const app = express();
 const path = require ('path');
 const cookies = require('cookie-parser');
+const methodOverride = require('method-override');
 
 /* Porque es un middleware de aplicacion completa */
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
@@ -24,16 +25,21 @@ app.use(cookies()); /* implemento cookies */
 
 app.use(userLoggedMiddleware); /* tiene que ir siempre despues de la session */
 
+app.use(methodOverride('_method'));
+
 
 /* Rutas */
 const homeRoutes = require ('./routes/home.js');
 const usersRoutes = require ('./routes/users.js');
 const productsRoutes = require ('./routes/products');
+const moviesRoutes = require ('./routes/movies');
 
 
 app.use('/', homeRoutes);
 app.use('/users', usersRoutes);
 app.use('/products', productsRoutes);
+app.use('/movies', moviesRoutes);
+
 
 
 /* Servidor */
