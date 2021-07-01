@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(session({
     secret: 'Silencio. Es un secreto...',
     resave: false,
-    saveUnitialized: false
+    saveUninitialized: false
 }));
 
 app.use(cookies()); /* implemento cookies */

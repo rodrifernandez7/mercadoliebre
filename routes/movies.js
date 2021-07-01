@@ -24,4 +24,7 @@ router.patch('/update/:id', moviesController.update);
 router.delete('/delete/:id', moviesController.delete);
 
 
+router.get('/search', moviesController.search);
+
+
 module.exports = router;
