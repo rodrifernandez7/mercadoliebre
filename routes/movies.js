@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const moviesController = require('../controllers/moviesController');
 
+router.get('/search', moviesController.search);
+
 /* Vista de creacion de pelicula */
 router.get('/add', moviesController.add);
 
@@ -22,9 +24,5 @@ router.patch('/update/:id', moviesController.update);
 
 /* Borrado de pelicula */
 router.delete('/delete/:id', moviesController.delete);
-
-
-router.get('/search', moviesController.search);
-
 
 module.exports = router;
