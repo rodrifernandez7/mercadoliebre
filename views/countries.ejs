@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+</head>
+<body>
+    <h2>Este es el listado de paises del mundo y provincias de Arg</h2>
+    <select>
+        <% provinces.forEach(province => { %> <!-- estableci en el controller que provinces es = a .provincias(como esta en la API) para que no confundirme -->
+            <option>
+                <%= province.nombre %> <!-- .nombre porque asi figura en la API el campo del nombre de las provincias -->
+            </option>
+        <% }) %>
+        </select>
+    <select>
+    <% countries.forEach(country => { %>
+        <option>
+            <%= country.name %>
+            
+        </option>
+    <% }) %>
+    </select>   
+</body>
+</html>
+
